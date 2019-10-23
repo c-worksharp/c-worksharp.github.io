@@ -30,8 +30,7 @@ const getAnswersOfLine = line => {
   for (const answer of answers) {
     let textAnswer = answer.querySelector('input[type="text"').value;
     let checkboxAnswer = answer.querySelector('input[type="checkbox"]').checked;
-    let comment = answer.querySelector('textarea').value
-    arr[i] = [checkboxAnswer, textAnswer, comment];
+    arr[i] = [checkboxAnswer, textAnswer];
     i++;
   }
   // console.log(arr);
@@ -45,6 +44,7 @@ const getValues = () => {
   const lines = document.querySelectorAll('.lines');
 
   const getQuestion = line => line.querySelector('.questions textarea').value;
+  const getComment = line => line.querySelector('.comment textarea').value;
 
   const objects = {};
   let i = 0;
@@ -52,6 +52,7 @@ const getValues = () => {
     let obj = {
       question: getQuestion(line),
       answer: getAnswersOfLine(line),
+      comment: getComment(line),
     }
     objects['question' + i] = obj;
     i++;
