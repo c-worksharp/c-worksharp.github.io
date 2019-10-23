@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Header</h1>
+      <div class="answer" style="display: none;">
+        <p>
+          <b>Ответ:</b><br>
+          <input type="checkbox" name="" id="">
+          <input type="text" size="40">
+        </p>
+        <p>
+          <b>Комментарий:</b><br>
+          <textarea cols="42" rows="3"></textarea>
+        </p>
+      </div>
+    </header>
+    <div id="main">
+      <div>
+        кнопочки
+        <input type="button" value="Отправить" onclick="getValues()">
+      </div>
+      <div id = "mainLines">
+        <div class = "lines">
+          <br>
+          <div class ="questions">
+            <b>Вопрос:</b><br>
+            <textarea cols="42" rows="3"></textarea>
+          </div>
+          <div class="answers">
+            <div class="answer">
+              <p>
+                <b>Ответ:</b><br>
+                <input type="checkbox" name="" id="">
+                <input type="text" size="40">
+              </p>
+              <p>
+                <b>Комментарий:</b><br>
+                <textarea cols="42" rows="3"></textarea>
+              </p>
+            </div>
+          </div>
+          <p>
+            <input type="button" value="Создать новый ответ" onclick="createAnswer(this.closest('.lines'))">
+          </p>
+          <br>
+        </div>
+      </div>
+      <div>
+        <input type="button" value="Добавить новый вопрос" onclick="createQuestion()"><br><br><br>
+        <input type="button" value="Отправить" onclick="getValues()">
+      </div>
+    </div>
+    <footer>
+      <h1>Footer</h1>
+      <p>
+        Нужно заполнить и выбрать правильный ответ
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
