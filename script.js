@@ -59,7 +59,7 @@ const getValues = () => {
   }
 
   console.log(objects);
-
+  document.write(JSON.stringify(objects));
   // location.reload();
 };
 
